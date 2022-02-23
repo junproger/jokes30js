@@ -1,0 +1,424 @@
+/* css for jokes30js */
+html,
+body {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+       -moz-box-sizing: inherit;
+            box-sizing: inherit;
+}
+html,
+body {
+    scroll-behavior: smooth;
+    background-color: silver;
+    font-family: 'Roboto', sans-serif;
+}
+html,
+body,
+header,
+footer,
+main {
+	display: block;
+    width: 100vw;
+    padding: 0 0;
+    border: none;
+    margin: 0 0;
+}
+nav,
+div,
+h1,
+h2,
+p {
+	display: block;
+    padding: 0 0;
+    border: none;
+    margin: 0 0;
+}
+.body {
+	display: block;
+	position: static;
+	max-width: 100vw;
+	min-height: 100vh;
+	background: black;
+    font-family: 'Roboto', sans-serif;
+	color: white;
+}
+.body::after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: -1000;
+	content: url('./assets/svg/junicon1.svg') url('./assets/svg/junicon2.svg') url('./assets/chars/bnbcouch.png') url('./assets/chars/butthead11.png') url('./assets/chars/butthead22.png') url('./assets/chars/beavis11.png') url('./assets/chars/beavis22.png') url('./assets/svg/rss-gold.svg') url('./assets/svg/rss-white.svg')
+}
+.wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    background: silver;
+	max-width: 1920px;
+	min-height: 100vh;
+	margin: 0 auto;
+}
+.header {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+	max-width: 1920px;
+	min-height: 50px;
+	padding: 0 40px;
+	color: white;
+	gap: 20px;
+}
+.logo {
+	width: 48px;
+	height: 50px;
+	flex: 0 0 48px;
+	background-image: url('./assets/svg/junicon2.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+    -webkit-transition: background-image 1s;
+            transition: background-image 1s;
+}
+.logo:hover {
+	background-image: url('./assets/svg/junicon1.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+    -webkit-transition: background-image 1s;
+            transition: background-image 1s;
+}
+.link {
+	width: 48px;
+	height: 50px;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 10;
+}
+.lang {
+	font-size: 24px;
+	font-weight: 600;
+}
+.eng,
+.rus {
+	color: white;
+	cursor: pointer;
+}
+.eng:hover,
+.rus:hover {
+	color: #ffb600;
+	-webkit-transition: color 1s;
+            transition: color 1s;
+}
+.select {
+	color: #ffb600;
+}
+.main {
+	display: flex;
+	position: static;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 1920px;
+	min-height: calc(100vh - 100px);
+    font-family: 'Roboto', sans-serif;
+	color: white;
+}
+.cover {
+	display: block;
+	position: relative;
+	flex: 0 1 412px;
+	background-image: url('./assets/chars/bnbcouch.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100vw;
+	max-width: 768px;
+	min-height: calc(100vh - 200px);
+    font-family: 'Roboto', sans-serif;
+	z-index: 100;
+	opacity: 1;
+	-webkit-transition: background-image 1s, z-index 1s, opasity 1s;
+            transition: background-image 1s, z-index 1s, opasity 1s;
+}
+.block {
+	display: flex;
+	position: relative;
+	flex: 0 1 412px;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 480px;
+	max-width: 512px;
+	min-height: 412px;
+}
+.beavis {
+	display: block;
+	position: relative;
+	flex: 0 1 224px;
+	max-width: 256px;
+	min-height: 387px;
+	background-image: url('./assets/chars/butthead11.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+    -webkit-transition: background-image 0.6s, -webkit-transform 0.6s, transform 0.6s;
+            transition: background-image 0.6s, -webkit-transform 0.6s, transform 0.6s;
+}
+.butthead {
+	display: block;
+	position: relative;
+	flex: 0 1 224px;
+	max-width: 256px;
+	min-height: 387px;
+	background-image: url('./assets/chars/beavis11.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+    -webkit-transition: background-image 0.6s, -webkit-transform 0.6s, transform 0.6s;
+            transition: background-image 0.6s, -webkit-transform 0.6s, transform 0.6s;
+}
+.beav_change {
+	animation-iteration-count: 6;
+	-webkit-animation-name: beav_change;
+	-moz-animation-name: beav_change;
+	-o-animation-name: beav_change;
+	animation-name: beav_change;
+	-webkit-animation-duration: 0.6s;
+	-moz-animation-duration: 0.6s;
+	-o-animation-duration: 0.6s;
+	animation-duration: 0.6s
+    -webkit-transition: background-image 0.6s, -webkit-transform 0.6s, transform 0.6s;
+            transition: background-image 0.6s, -webkit-transform 0.6s, transform 0.6s;
+}
+.butt_change {
+	animation-iteration-count: 6;
+	-webkit-animation-name: butt_change;
+	-moz-animation-name: butt_change;
+	-o-animation-name: butt_change;
+	animation-name: butt_change;
+	-webkit-animation-duration: 0.6s;
+	-moz-animation-duration: 0.6s;
+	-o-animation-duration: 0.6s;
+	animation-duration: 0.6s;
+    -webkit-transition: background-image 0.6s, -webkit-transform 0.6s, transform 0.6s;
+            transition: background-image 0.6s, -webkit-transform 0.6s, transform 0.6s;
+}
+@-webkit-keyframes beav_change {
+0% {
+	background-image: url('./assets/chars/butthead11.png');
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	}
+50% {background-image: url('./assets/chars/butthead22.png');
+	-webkit-transform: rotate(3deg);
+	transform: rotate(3deg);
+	}
+}
+@-moz-keyframes beav_change {
+0% {background-image: url('./assets/chars/butthead11.png');
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	}
+50% {background-image: url('./assets/chars/butthead22.png');
+	-webkit-transform: rotate(3deg);
+	transform: rotate(3deg);
+	}
+}
+@-o-keyframes beav_change {
+0% {background-image: url('./assets/chars/butthead11.png');
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	}
+50% {background-image: url('./assets/chars/butthead22.png');
+	-webkit-transform: rotate(3deg);
+	transform: rotate(3deg);
+	}
+}
+@keyframes beav_change {
+0% {background-image: url('./assets/chars/butthead11.png');
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	}
+50% {background-image: url('./assets/chars/butthead22.png');
+	-webkit-transform: rotate(3deg);
+	transform: rotate(3deg);
+	}
+}
+@-webkit-keyframes butt_change {
+0% {background-image: url('./assets/chars/beavis11.png');
+	-webkit-transform: rotate(3deg);
+	transform: rotate(3deg);
+	}
+50% {background-image: url('./assets/chars/beavis22.png');
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	}
+}
+@-moz-keyframes butt_change {
+0% {background-image: url('./assets/chars/beavis11.png');
+	-webkit-transform: rotate(3deg);
+	transform: rotate(3deg);
+	}
+50% {background-image: url('./assets/chars/beavis22.png');
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	}
+}
+@-o-keyframes butt_change {
+0% {background-image: url('./assets/chars/beavis11.png');
+	-webkit-transform: rotate(3deg);
+	transform: rotate(3deg);
+	}
+50% {background-image: url('./assets/chars/beavis22.png');
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	}
+}
+@keyframes butt_change {
+0% {background-image: url('./assets/chars/beavis11.png');
+	-webkit-transform: rotate(3deg);
+	transform: rotate(3deg);
+	}
+50% {background-image: url('./assets/chars/beavis22.png');
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	}
+}
+.beav_jokes {
+	top: 60px;
+	left: 190px;
+	display: block;
+	position: absolute;
+	width: 64px;
+	max-width: 128px;
+	min-height: 64px;
+    font-family: 'Roboto', sans-serif;
+	z-index: 100;
+	color: black;
+}
+.butt_jokes {
+	top: 190px;
+	left: 240px;
+	display: block;
+	position: absolute;
+	width: 64px;
+	max-width: 128px;
+	min-height: 64px;
+    font-family: 'Roboto', sans-serif;
+	z-index: 100;
+	color: black;
+}
+.beav_jokes,
+.butt_jokes {
+	font-size: 12px;
+	font-weight: 400;
+}
+.getjokes {
+	font-weight: normal;
+}
+.getjokes:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+.shake-btn {
+  animation-name: shake-btn;
+  animation-duration: 0.6s;
+  animation-iteration-count: 6;
+}
+@keyframes shake-btn {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+    font-family: 'Roboto', sans-serif;
+	max-width: 1920px;
+	min-height: 50px;
+	padding: 0 40px;
+	border: none;
+	color: white;
+	gap: 20px;
+}
+.github {
+	color: white;
+	text-decoration: none;
+    -webkit-transition: color 1s;
+            transition: color 1s;
+}
+.github:hover {
+	color: #ffb600;
+	-webkit-transition: color 1s;
+            transition: color 1s;
+}
+.school {
+	width: 90px;
+	height: 30px;
+	flex: 0 0 110px;
+	margin-left: auto;
+	background-image: url('./assets/svg/rss-white.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	filter: none;
+    -webkit-transition: background-image 1s;
+            transition: background-image 1s;
+}
+.school:hover {
+	background-image: url('./assets/svg/rss-gold.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+    -webkit-transition: background-image 1s;
+            transition: background-image 1s;
+}
+.inform {
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: lowercase;
+}
+.none {
+	opacity: 0;
+	display: none;
+	z-index: -1000;
+	-webkit-transition: background-image 1s, z-index 1s, opasity 1s;
+            transition: background-image 1s, z-index 1s, opasity 1s;
+}
